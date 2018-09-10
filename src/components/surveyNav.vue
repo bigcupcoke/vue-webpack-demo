@@ -1,9 +1,11 @@
 <template>
-	<ul class="navigator">
-		<li class="nav-tab" v-for='tab in tabs' :key='tab.link'>
-			<router-link :to='{name: tab.link}'>{{ tab.msg }}</router-link>
-		</li>
-	</ul>
+	<el-menu :default-active="activeIndex" class="navigator" mode="horizontal"
+		background-color="orange"
+	@select="handleSelect">
+		<el-menu-item v-for='(tab, index) in tabs' :key='tab.link' :index='index'>
+			<router-link :to='{ name: tab.link }'>{{ tab.msg}} {{ [ index ]}}</router-link>
+		</el-menu-item>
+	</el-menu>
 </template>
 
 <script>
@@ -24,15 +26,21 @@ export default {
 			  msg: '我的问卷',
 			  link: 'profile',
 		  }
-	  ]
+	  ],
+	  activeIndex: 0,
     }
   },
+	methods: {
+		handleSelect(key, keyPath) {
+			console.log(key, keyPath);
+		}
+	}
 }
 </script>
 
-<style <style>
+<style>
 .navigator {
-	background: orange;
+	/* background: orange; */
 }
 </style>
 

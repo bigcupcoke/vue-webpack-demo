@@ -9,7 +9,7 @@ Vue.use(Router)
 export default new Router({
 	routes: [
 		{
-			path: '/m',
+			path: '/manage',
 			name: 'manage',
 			component: manage
 		},
