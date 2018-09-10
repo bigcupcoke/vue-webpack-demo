@@ -1,5 +1,8 @@
 <template>
 	<ul class="survey-list">
+		<li>
+			<el-button type="primary" @click="add">新增问卷</el-button>
+		</li>
 		<li v-for="li in list">
 			<div class="">{{ li.title }}</div>
 			<div class="">{{ li.time }}</div>
@@ -21,6 +24,11 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+	  add: function() {
+		  this.$router.push('edit')
+	  }
   }
 };
 </script>

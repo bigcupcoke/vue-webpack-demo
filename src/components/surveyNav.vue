@@ -2,7 +2,7 @@
 	<el-menu :default-active="activeIndex" class="navigator" mode="horizontal"
 		background-color="orange"
 	@select="handleSelect">
-		<el-menu-item v-for='(tab, index) in tabs' :key='tab.link' :index='index'>
+		<el-menu-item v-for='(tab, index) in tabs' :key='tab.link' :index='index.toString()'>
 			<router-link :to='{ name: tab.link }'>{{ tab.msg}} {{ [ index ]}}</router-link>
 		</el-menu-item>
 	</el-menu>
@@ -27,7 +27,7 @@ export default {
 			  link: 'profile',
 		  }
 	  ],
-	  activeIndex: 0,
+	  activeIndex: '0',
     }
   },
 	methods: {
