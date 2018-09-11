@@ -9,9 +9,11 @@
 			<div class="">{{ li.status }}</div>
 		</li>
 	</ul>
+	<foot></foot>
 </template>
 
 <script>
+import foot from './foot'
 export default {
   name: "manage",
   data: function() {
@@ -29,6 +31,9 @@ export default {
 	  add: function() {
 		  this.$router.push('edit')
 	  }
+  },
+    components: {
+	  foot,
   }
 };
 </script>
