@@ -6,10 +6,11 @@
 </template>
 
 <script>
+import foot from './foot'
 export default {
 	name: 'profile',
 	components: {
-		foot
+		foot,
 	}
 }
 </script>
