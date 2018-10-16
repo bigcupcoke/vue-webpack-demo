@@ -2,7 +2,8 @@
   <div id="app">
 	<surveyNav></surveyNav>
     <img src="./assets/logo.png">
-    <router-view/>
+    <router-view></router-view>
+    <router-view name="a"></router-view>
   </div>
 </template>
 

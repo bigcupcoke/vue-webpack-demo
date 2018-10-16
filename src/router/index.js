@@ -8,11 +8,16 @@ import edit from '@/views/edit/edit'
 Vue.use(Router)
 
 export default new Router({
+	mode: 'history',
+	base: __dirname,
 	routes: [
 		{
 			path: '/manage',
 			name: 'manage',
-			component: manage
+			components: {
+				default: manage,
+				a: edit,
+			}
 		},
 		{
 			path: '/profile',

@@ -19,7 +19,10 @@ export default {
 	},
 	components: {
 		foot,
-	}
+	},
+	created() {
+		console.log('abc')
+	},
 }
 </script>
 
